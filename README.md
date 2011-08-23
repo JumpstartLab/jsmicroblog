@@ -13,5 +13,6 @@ After then, simply `bundle exec rackup` to run the app. You can also
 sure you're running a server in the background, or the watir tests will
 fail!
 
-  1: http://rubygems.org/gems/watir
-  2: http://rubygems.org/gems/capybara
+   [1]: http://rubygems.org/gems/watir
+   [2]: http://rubygems.org/gems/capybara
+
