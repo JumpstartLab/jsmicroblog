@@ -6,7 +6,7 @@ require 'test/unit'
 require 'rack/test'
 require 'watir-webdriver'
 
-require File.expand_path('jsmicroblog.rb')
+require 'jsmicroblog'
 
 module TestHelper
   include Rack::Test::Methods
@@ -18,7 +18,7 @@ module TestHelper
 
   def visit(url)
     url = 'http://localhost:9292/' if url == :homepage
-    url = "http://locahost:9292" + url if url.start_with?("/")
+    url = "http://localhost:9292" + url if url.start_with?("/")
 
     browser.goto url
   end
