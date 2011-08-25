@@ -27,7 +27,7 @@ class JSMicroblog < Sinatra::Base
   end
 
   get '/posts/:id' do
-    @post = Post.find(params[:id]).first
+    @post = Post.first(:id => params[:id])
     erb :show
   end
 end
