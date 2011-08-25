@@ -25,6 +25,11 @@ class JSMicroblog < Sinatra::Base
     Post.create(params)
     redirect "/"
   end
+
+  get '/posts/:id' do
+    @post = Post.find(params[:id]).first
+    erb :show
+  end
 end
 
 __END__
@@ -55,7 +60,12 @@ What do you have to say for yourself?<br />
 <h3>Here's what others have said!</h3>
 <ul>
   <% Post.all.sort.reverse.each do |post| %>
-    <li><span name="who"><%= post.author %></span> said '<span name="what"><%= post.body %></span>'.</li>
+    <li><span name="who"><%= post.author %></span> said '<span name="what"><%= post.body %></span>'. <a href="/posts/<%= post.id %>">permalink</a></li>
   <% end %>
 </ul>
+
+@@show
+<h1>JSMicroblog: A post</h1>
+<span name="who"><%= @post.author %></span> said '<span name="what"><%= @post.body %></span>'.
+<p><a href="/">Go back to all posts</a></p>
 
