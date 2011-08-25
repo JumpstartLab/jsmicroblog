@@ -2,7 +2,6 @@ source :rubygems
 
 gem "sinatra"
 gem "rake"
-gem "unicorn"
 gem "data_mapper"
 gem "dm-yaml-adapter"
 
