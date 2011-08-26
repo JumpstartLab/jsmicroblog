@@ -18,7 +18,7 @@ module TestHelper
 
   def visit(url)
     url = 'http://localhost:9292/' if url == :homepage
-    url = "http://locahost:9292" + url if url.start_with?("/")
+    url = "http://localhost:9292" + url if url.start_with?("/")
 
     browser.goto url
   end
