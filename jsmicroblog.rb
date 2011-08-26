@@ -50,7 +50,7 @@ __END__
 Who are you?
 </label><br />
 <input type="text" name="author" id="author" /><br />
-<label for="body" />
+<label for="body">
 What do you have to say for yourself?<br />
 </label>
 <input type="text" name="body" id="body" /><br />
