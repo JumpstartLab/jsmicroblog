@@ -6,7 +6,7 @@ require 'test/unit'
 require 'rack/test'
 require 'watir-webdriver'
 
-require File.expand_path('jsmicroblog.rb')
+require 'jsmicroblog'
 
 module TestHelper
   include Rack::Test::Methods
